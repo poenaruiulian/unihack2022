@@ -1,15 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Code4Food</title>
-    <link rel="stylesheet" href="login.css">
-    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
-</head>
-<body>
-    <img class="logo" src='./images/logo.png'>
+{% extends "base.html" %}
+
+{% block style %} <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='login.css') }}"> {% endblock%}
+
+{% block body %} 
+
+  <body>
+    <img class="logo" src="{{url_for('static', filename='./images/logo.png')}}">
     <header>Code4Food</header>
       <div class="container">
         <div class="logDetails">
@@ -25,5 +21,6 @@
         </form>
         </div>
       </div>
-</body>
-</html>
+  </body>
+
+{% endblock %}

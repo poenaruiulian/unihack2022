@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask,session,request,redirect,url_for,render_template
 from datetime import timedelta
 
 from db import db, db_init
@@ -11,15 +11,29 @@ app.config['SQLALCHEMY_DATABASE_URI']='sqlite:///users.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db_init(app)
 
+userInSession = False
+
 @app.route("/", methods=['GET','POST'])
 def home():
-    
+    if userInSession == True:
+        return redirect(url_for("dashboard"))
+    else: 
+        return render_template("login.html")
 
-@app.route("/login")
-def login():
+@app.route("/register", methods = ['POST', 'GET'])
+def register():
+    if request.method == 'POST':
 
-@app.route("/signup")
-def signup():
+        session.permanent = True
 
-@app.route("/profiles")
-def profiles():
+        firstNameRegister = request.form["first_name"]
+        lastNameRegister = request.form["last_name"]
+        passRegister = request.form["passReg"]
+        passRegisterVerif = request.form["passRegVerif"]
+        mailRegister = request.form["mail"]
+
+
+
+
+if __name__== "__main__":
+    app.run(debug=True)
