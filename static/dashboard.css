@@ -1,0 +1,42 @@
+:root {
+    --bgcolor : "#FCE2DB";
+    --container-border-color : "#624F82";
+    --box-shadow: "#888888";
+    --background-color-container: "#FAF7F0";
+    --background-color-input: "#80489C";
+    --background-color-hover: "#432C7A";
+    --font-color-input: "#3F3B6C";
+  }
+
+body {
+    background-color: #FCE2DB;
+}
+
+section {
+    height: 90vh;
+  }
+
+.container {
+    border: 5px solid red;
+    max-width: 50%;
+    width: 30%;
+    margin: auto;
+    height: 70%;
+    background-color: #FAF7F0;
+    border-radius: 15%;
+    padding: 1%;
+}
+
+.header{
+    text-align: center;
+    color: #ccc;
+}
+
+header {
+font-size: 36px;
+font-weight: 700;
+color: white;
+}  
+span{
+    color:#000
+}

@@ -1,1 +1,17 @@
-<h1>Hello home sweetheart</h1>
+{% extends "base.html" %}
+
+{% block style %} <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}"> {% endblock%}
+
+{% block body %} 
+<body> 
+    <section>
+        <div class="header">
+            <a href="./login.html"><img class="logo" src="{{url_for('static', filename='./images/logo.png')}}"></a>
+            <header>Code4<span>Food</span></header>
+        </div>
+        <div class="container">
+            <p>Buna Buna</p>
+        </div>
+    </section>
+</body>
+{% endblock %}
