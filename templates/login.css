@@ -1,27 +1,27 @@
 :root {
-    --bgcolor : "#FCE2DB"
-    --container-border-color : "#624F82"
-    --box-shadow: "#888888"
-    --background-color-container: "#FAF7F0"
-    --background-color-input: "#80489C"
-    --background-color-hover: "#432C7A"
-    --font-color-input: "#3F3B6C"
+    --bgcolor : #FCE2DB
+    --container-border-color : #624F82
+    --box-shadow: #888888
+    --background-color-container: #FAF7F0
+    --background-color-input: #80489C
+    --background-color-hover: #432C7A
+    --font-color-input: #3F3B6C
   }
   
   body {
-    margin: 0;
+    margin: none;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
       'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
       sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: var(--bgcolor)
+    background-image: url(./images/giphy.gif) ;
   }
   .container{
     border: 1.5px solid #624F82;
     border-radius: 50px;
     box-shadow: 5px 8px  12px #888888;
-    margin: 3% 25% 15% 25%;
+    margin:auto 25% 15% 25%;
     background-color: #FAF7F0;
     text-align: center;
     padding: 0rem 6rem 3rem 6rem ;
@@ -40,11 +40,14 @@
     border: none;
     border-radius: 15px;
     cursor: pointer;
-  
+    font-size: 18px;
+    font-weight: 600;
   }
   
   input[type=submit]:hover {
     background-color: #432C7A;
+    font-size: 18px;
+    font-weight: 600;
   }
   input[type=password], input[type=email]{
   
@@ -82,7 +85,25 @@
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
       monospace;
   }
+.header{
+        display: inline-flexbox;
+        text-align: center;
+        font-size: 36px;
+        font-weight: 700;
+        color: #ccc;
+        position: inherit;
+        padding: auto auto 2rem;
+
+}
 header {
     text-align: center;
-    margin: 0rem 20rem 3rem 20rem;
+    font-size: 36px;
+    font-weight: 700;
+    color: white;
+    position: inherit;
+    padding: auto auto 2rem;
+
 }  
+span{
+    color:#000
+}
