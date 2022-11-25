@@ -4,23 +4,28 @@
 
 {% block body %} 
 
-  <body>
-    <img class="logo" src="{{url_for('static', filename='./images/logo.png')}}">
-    <header>Code4Food</header>
-      <div class="container">
-        <div class="logDetails">
-        <h1 class="logIn">Log In</h1>
-        <form class="Form">
-        <label for="fname">E-mail </label>
-        <input type="email"  name="e-mail" placeholder="example@example.com"/><br/>
-        <label for="lname">Password </label>
-        <input type="password" name="password" placeholder="**********"/><br/>
-        <h2 class="register">Don't have an account?   Register Here</h2>
-        <input type="submit" value="Submit"/>
-      
-        </form>
-        </div>
+<body>
+  <div class="header">
+  <a href="./login.html"><img class="logo" src="{{url_for('static', filename='./images/logo.png')}}"></a>
+  <header>Code4<span>Food</span></header>
+  </div>
+    <div class="container">
+      <div class="logDetails">
+      <h1 class="logIn">Log In</h1>
+      <form class="Form" method="POST">
+      <label for="fname">E-mail </label>
+      <input type="email"  name="e-mail" placeholder="example@example.com"/><br/>
+      <label for="lname">Password </label>
+      <input type="password" name="password" placeholder="**********"/><br/>
+      <h2 class="register">Don't have an account? <a href="register">  Register Here</a></h2>
+      <input type="submit" value="Login"/>
+    
+      </form>
       </div>
-  </body>
+    </div>
+    {% if get_flashed_messages()%}
+    alert({{ get_flashed_messages() }})</p>
+    {% endif %}
+</body>
 
 {% endblock %}

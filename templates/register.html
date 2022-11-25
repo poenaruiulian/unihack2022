@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block style %} <link rel="stylesheet" href="{{ url_for('static', filename='register.css') }}"> {% endblock%}
+
+{% block body %}
+<body>
+    <div class="header">
+    <a href="./login.html"><img class="logo" src="{{url_for('static', filename='./images/logo.png')}}"></a>
+    <header>Code4<span>Food</span></header>
+    </div>
+      <div class="container">
+        <div class="logDetails">
+        <h1 class="logIn">Register</h1>
+        <form class="Form" action="#" method="POST">
+            <label for="fname">First Name </label>
+            <input type="firstname"  name="firstname" placeholder="Johnson"/><br/>
+            <label for="fname">Last Name </label>
+            <input type="lastname"  name="lastname" placeholder="John"/><br/>
+        <label for="fname">E-mail </label>
+        <input type="email"  name="e-mail" placeholder="example@example.com"/><br/>
+        <label for="lname">Password </label>
+        <input type="password" name="password" placeholder="**********"/><br/>
+        <label for="lname">Confirm Password </label>
+        <input type="password" name="cpassword" placeholder="**********"/><br/>
+        <h2 class="register">Already have an account? <a href="login">  Login Here</a></h2>
+        <input type="submit" value="Register"/>
+      
+        </form>
+        </div>
+      </div>
+
+      {% if get_flashed_messages()%}
+      alert({{ get_flashed_messages() }})</p>
+      {% endif %}
+</body>
+{% endblock %}
