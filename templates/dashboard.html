@@ -1,1 +1,34 @@
-<h1>Hello home sweetheart</h1>
+{% extends "base.html" %}
+
+{% block style %} <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}"> {% endblock%}
+
+{% block body %} 
+<body> 
+    <section>
+        <div class="header">
+            <a href="./login.html"><img class="logo" src="{{url_for('static', filename='./images/logo.png')}}"></a>
+            <header>Code4<span>Food</span></header>
+        </div>
+        <div class="container">
+            <div class="upPage">
+                {% for k in range(length)%}
+                    <div class="card">
+                        <p>{{cardsToShow[k].cardName}}</p>
+                    </div>
+                {%endfor %}
+            </div>
+            <div class="downPage">
+                <div class="downLeft">
+                    <input type="text" id="fname" name="fname" placeholder="Card to delete">
+                </div>
+                <div class="downDelete">
+                    <a href="./login.html"><img class="trashcan" src="{{url_for('static', filename='./images/Trashcan.png')}}"></a>
+                </div>
+                <div class="downAdd">
+                    <a href="./login.html"><img class="plus" src="{{url_for('static', filename='./images/plusButton.png')}}"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+{% endblock %}

@@ -91,7 +91,12 @@ def register():
 
 @app.route("/dashboard", methods=['GET','POST'])
 def dashboard():
-    return render_template("dashboard.html")
+    if 'userInSession' in session:
+        cardsToShow = UsersCards.query.filter_by(mail=session['userInSession']).all()
+        print(cardsToShow)
+    else: redirect(url_for("login"))
+
+    return render_template("dashboard.html", cardsToShow = cardsToShow, length = len(cardsToShow))
 
 @app.route("/create_card", methods=['GET','POST'])
 def create_card():
@@ -102,10 +107,11 @@ def create_card():
             displayName = request.form["displayName"]
             profilePic = request.files["profilePic"]
 
-            cardName=session['userInSession']+" "+cardName
+            
 
             addCard = UsersCards(
-                mail_cardName = cardName,
+                mail = session['userInSession'],
+                cardName = cardName,
                 displayName = displayName,
                 profilePic = profilePic.read()
             )
@@ -117,10 +123,9 @@ def create_card():
             linkBody = request.form["link"]
             linkPic = request.files["linkPic"]
 
-            linkTitle = session['userInSession']+" "+linkTitle
-
             addLink = Link(
-                mail_linkName = linkTitle,
+                mail = session['userInSession'],
+                linkName = linkTitle,
                 link = linkBody,
                 linkPic = linkPic.read()
             )
