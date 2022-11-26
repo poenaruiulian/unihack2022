@@ -21,15 +21,19 @@ body {
   border: 1.5px solid #624F82;
   border-radius: 50px;
   box-shadow: 5px 8px  12px #888888;
-  margin:auto 25% 15% 25%;
+  margin:auto 25% 0 25%;
   background-color: #FAF7F0;
   text-align: center;
   padding: 0rem 6rem 3rem 6rem ;
 }
 .logo{
   margin: 1rem;
-  width: 5rem;
-  height: 5rem;
+  width: 4rem;
+  height: 4rem;
+  position: absolute;
+  top: 1%;
+  left: 1%;
+
 }
 input[type=submit] {
   width: 50%;
@@ -86,13 +90,14 @@ code {
     monospace;
 }
 .header{
-      display: inline-flexbox;
+      display: flexbox;
       text-align: center;
       font-size: 36px;
       font-weight: 700;
       color: #ccc;
       position: inherit;
       padding: auto auto 2rem;
+      margin: 2% auto 2% auto;
 
 }
 header {
