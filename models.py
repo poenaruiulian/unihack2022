@@ -6,3 +6,15 @@ class Users(db.Model):
     last_name = db.Column(db.Text, nullable = False)
     password = db.Column(db.Text, nullable = False)
     mail = db.Column(db.Text, nullable = False)
+
+class UsersCards(db.Model):
+    id = db.Column(db.Integer, primary_key = True)
+    mail_cardName = db.Column(db.Text, nullable = False)
+    displayName = db.Column(db.Text, nullable = False)
+    profilePic = db.Column(db.Text, nullable = False)
+    
+class Link(db.Model):
+    id = db.Column(db.Integer, primary_key = True)
+    mail_linkName = db.Column(db.Text, nullable = False)
+    link = db.Column(db.Text, nullable = False)
+    linkPic = db.Column(db.Text, nullable = False)

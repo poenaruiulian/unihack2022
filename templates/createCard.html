@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block style %}  <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='createCard.css') }}">  {% endblock %}
+{% block body %} 
+<body>
+    <div class="header">
+    <a href="./login.html"><img class="logo" src="{{url_for('static', filename='./images/logo.png')}}"></a>
+    <header>Code4<span>Food</span></header>
+    </div>
+      <div class="container">
+        <div class="logDetails">
+        <h1 class="logIn">Create card</h1>
+        <form class="Form" method="POST" enctype="multipart/form-data">
+
+          <label for="fname">Card Name</label>
+          <input type="name"  name="cardName" placeholder="ex: Bussniess, Dating, Streaming"/><br/>
+
+          <label for="fname">Display Name</label>
+          <input type="name"  name="displayName" placeholder="ex: Iulian, Gamer69, SensualOrc"/><br/>
+
+          <label>Profile Pic</label>
+          <input  type="file" name="profilePic" placeholder="Change profile picture"><br/><br/>
+
+          <label>Social Link Title</label>
+          <input type="name" name="linkTitle" placeholder="ex: Facebook, Instagram"><br/>
+          <label>Social Link</label>
+          <input type="name" name="link" placeholder="ex: twitter_account_link"><br/>
+          <label>Link Pic</label>
+          <input  type="file" name="linkPic"><br/>
+
+
+          <input type="submit" value="Send"/>
+        </form>
+        </div>
+      </div>
+      {% if get_flashed_messages()%}
+      alert({{ get_flashed_messages() }})</p>
+      {% endif %}
+  </body>
+{% endblock %}

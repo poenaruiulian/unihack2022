@@ -3,7 +3,8 @@ from datetime import timedelta
 import bcrypt
 
 from db import db, db_init
-from models import Users
+from models import Users,UsersCards, Link
+
 
 app = Flask(__name__)
 app.permanent_session_lifetime=timedelta(days=5)
@@ -77,6 +78,7 @@ def register():
                 db.session.commit()
 
                 session['userInSession'] = mailRegister
+                print()
                 message = 'Welcome'
         else:
             message = "The passwords don't match,Try again."
@@ -91,6 +93,44 @@ def register():
 def dashboard():
     return render_template("dashboard.html")
 
+@app.route("/create_card", methods=['GET','POST'])
+def create_card():
+    if 'userInSession' in session:
+        if request.method == 'POST':
+
+            cardName = request.form["cardName"]
+            displayName = request.form["displayName"]
+            profilePic = request.files["profilePic"]
+
+            cardName=session['userInSession']+" "+cardName
+
+            addCard = UsersCards(
+                mail_cardName = cardName,
+                displayName = displayName,
+                profilePic = profilePic.read()
+            )
+
+            db.session.add(addCard)
+            db.session.commit()
+
+            linkTitle = request.form["linkTitle"]
+            linkBody = request.form["link"]
+            linkPic = request.files["linkPic"]
+
+            linkTitle = session['userInSession']+" "+linkTitle
+
+            addLink = Link(
+                mail_linkName = linkTitle,
+                link = linkBody,
+                linkPic = linkPic.read()
+            )
+
+            db.session.add(addLink)
+            db.session.commit()
+
+    else: return redirect(url_for("login"))
+
+    return render_template("createCard.html")
 
 @app.route("/signout")
 def signout():
@@ -101,5 +141,5 @@ def signout():
         return redirect(url_for("login"))
 
 if __name__== "__main__":
-
+ 
     app.run(debug=True)
