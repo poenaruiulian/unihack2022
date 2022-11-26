@@ -15,18 +15,15 @@
                     <div class="card">
                         <p>{{cardsToShow[k].cardName}}</p>
                     </div>
+                    <br>
                 {%endfor %}
             </div>
             <div class="downPage">
-                <div class="downLeft">
-                    <input type="text" id="fname" name="fname" placeholder="Card to delete">
-                </div>
-                <div class="downDelete">
-                    <a href="./login.html"><img class="trashcan" src="{{url_for('static', filename='./images/Trashcan.png')}}"></a>
-                </div>
-                <div class="downAdd">
-                    <a href="./login.html"><img class="plus" src="{{url_for('static', filename='./images/plusButton.png')}}"></a>
-                </div>
+                <form method="POST">
+                    <input class="inputDel" type="text" name="delete" placeholder="Card to delete">
+                    <button type="submit"><img class="trash" src="{{url_for('static', filename='./images/Trashcan.png')}}" /></button>
+                </form>
+                <button class="plusBtn"><a href="create_card"><img class="plus" src="{{url_for('static', filename='./images/plusButton.png')}}"></a></button>
             </div>
         </div>
     </section>

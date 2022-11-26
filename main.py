@@ -93,7 +93,18 @@ def register():
 def dashboard():
     if 'userInSession' in session:
         cardsToShow = UsersCards.query.filter_by(mail=session['userInSession']).all()
-        print(cardsToShow)
+        
+        if request.method == "POST":
+            cardToDelete = request.form["delete"]
+            print(cardToDelete)
+
+            deleteCard = UsersCards.query.filter_by(mail =session['userInSession']).filter_by(cardName=cardToDelete).first()
+            db.session.delete(deleteCard)
+            db.session.commit()
+
+            return redirect(url_for("dashboard"))
+
+            
     else: redirect(url_for("login"))
 
     return render_template("dashboard.html", cardsToShow = cardsToShow, length = len(cardsToShow))
@@ -132,6 +143,8 @@ def create_card():
 
             db.session.add(addLink)
             db.session.commit()
+
+            return redirect(url_for("dashboard"))
 
     else: return redirect(url_for("login"))
 
