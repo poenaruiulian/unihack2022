@@ -1,11 +1,14 @@
 {% extends "base.html" %}
 {% block style %}  <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='createCard.css') }}">  {% endblock %}
+{% block function %}  <link  href="{{ url_for('static', filename='createCard.js') }}">  {% endblock %}
+
 {% block body %} 
 <body>
-    <div class="header">
-    <a href="./login.html"><img class="logo" src="{{url_for('static', filename='./images/logo.png')}}"></a>
-    <header>Code4<span>Food</span></header>
-    </div>
+  <div class="header">
+ 
+  <header>Code4<span>Food</span></header>
+  </div>
+  <a href="./login.html"><img class="logo" src="{{url_for('static', filename='./images/logo.png')}}"></a>
       <div class="container">
         <div class="logDetails">
         <h1 class="logIn">Create card</h1>
@@ -16,17 +19,25 @@
 
           <label for="fname">Display Name</label>
           <input type="name"  name="displayName" placeholder="ex: Iulian, Gamer69, SensualOrc"/><br/>
-
-          <label>Profile Pic</label>
-          <input  type="file" name="profilePic" placeholder="Change profile picture"><br/><br/>
-
-          <label>Social Link Title</label>
-          <input type="name" name="linkTitle" placeholder="ex: Facebook, Instagram"><br/>
-          <label>Social Link</label>
-          <input type="name" name="link" placeholder="ex: twitter_account_link"><br/>
-          <label>Link Pic</label>
-          <input  type="file" name="linkPic"><br/>
-
+          <div class="avatar">
+    
+          <input  type="file" id="img" style="display:none;"/>
+          <label for="img">Upload</label>
+        </div>
+          <div class="linkBox">
+            <div class="linkBoxTitle">
+              <label>Title</label>
+              <input type="name" name="linkTitle" placeholder="ex: Facebook, Instagram"><br/>
+            </div>
+            <div class="linkBoxPhoto">
+              <input type="file" name="uploadfile" id="img" style="display:none;"/>
+              <label for="img">Upload</label>
+            </div>
+            <div class="linkBoxLink">
+              <label>Link</label>
+              <input type="name" name="link" placeholder="ex: twitter_account_link"><br/>
+            </div>
+          </div>
 
           <input type="submit" value="Send"/>
         </form>
