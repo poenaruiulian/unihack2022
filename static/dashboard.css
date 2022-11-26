@@ -17,13 +17,13 @@ section {
   }
 
 .container {
-    border: 5px solid red;
+    box-shadow: 5px 8px  12px #888888;
     max-width: 50%;
     width: 30%;
     margin: auto;
     height: 70%;
     background-color: #FAF7F0;
-    border-radius: 15%;
+    border-radius: 10%;
     padding: 1%;
 }
 
@@ -39,4 +39,51 @@ color: white;
 }  
 span{
     color:#000
+}
+
+.upPage {
+    height: 80%;
+    width: 100%;
+}
+
+.downPage {
+    height: 20%;
+    width: 100%;
+    display: flex;
+    justify-content: row;
+}
+
+
+input {
+    border-radius: 30%;
+    width: 60%;
+    height: 25%;
+    display: flex;
+    align-self: center;
+    
+    border: 5px solid black;
+}
+
+.downLeft {
+    height: 100%;
+    width: 50%;
+    flex-direction: column;
+    display: flex;
+    align-self: center;
+    align-items: center;
+    
+}
+
+.downDelete {
+    width: 10%;
+    display: flex;
+    align-items: center;
+    
+}
+
+.downAdd {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
