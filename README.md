@@ -1,6 +1,6 @@
 # unihack2022
 
-#This is Social Card.
+# This is Social Card.
 
 A project that is made by people for people.
 This project is a website that has the main goal of helping people digitalize their business cards aka share their socials easier.
