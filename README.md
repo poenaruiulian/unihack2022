@@ -8,6 +8,6 @@ This project is a website that has the main goal of helping people digitalize th
 
 
 #Our Team 
--Pop Iulian - Front End developer @iulian352(Instagram) 
--Poenaru Iulian - BackEnd developer
--Raevschi Cătălin - Front End developer
+- **Pop Iulian**: Front End developer
+- **Poenaru Iulian**: BackEnd developer
+- **Raevschi Cătălin**: Front End developer
