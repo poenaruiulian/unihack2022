@@ -11,7 +11,7 @@
 <img src="./imagesForReadme/login.png" width="800" height="430">
 <img src="./imagesForReadme/register.png" width="800" height="430">
 
-#### After joining the SocialCard family you are welcomed to the Dashboard page where you can make card as many as you want.
+#### After joining the SocialCard family you are welcomed to the Dashboard page where you can make cards as many as you want.
 <img src="./imagesForReadme/dashboard.png" width="800" height="430">
 
 #### With simplicity in mind, you can add five social links in the CreateCard page
