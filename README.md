@@ -23,4 +23,4 @@
 - **Poenaru Iulian**: BackEnd developer
 - **Raevschi Cătălin**: Front End developer
 
-` This project is in the preAlpha release `
+` This project is in the preAlpha release. And was invented and made in 48 hours during Unihack2022, so don't be so judgy if it's not ideal, because it has atleast a cute purple cloudy design `
