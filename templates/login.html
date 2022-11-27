@@ -19,13 +19,15 @@
       <input type="password" name="password" placeholder="**********"/><br/>
       <h2 class="register">Don't have an account? <a href="register">  Register Here</a></h2>
       <input type="submit" value="Login"/>
-    
+      <div class="error">
+      {% if get_flashed_messages()%}
+      <h2>{{get_flashed_messages()}}</h2 >
+      {% endif %}
+      </div>
       </form>
       </div>
     </div>
-    {% if get_flashed_messages()%}
-    alert({{ get_flashed_messages() }})</p>
-    {% endif %}
+
 </body>
 
 {% endblock %}

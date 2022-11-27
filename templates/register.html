@@ -24,13 +24,13 @@
         <input type="password" name="cpassword" placeholder="**********"/><br/>
         <h2 class="register">Already have an account? <a href="login">  Login Here</a></h2>
         <input type="submit" value="Register"/>
-      
+        <div class="error">
+        {% if get_flashed_messages()%}
+        <h2>{{get_flashed_messages()}}</h2 >
+        {% endif %}
+        </div>
         </form>
         </div>
       </div>
-
-      {% if get_flashed_messages()%}
-      alert({{ get_flashed_messages() }})</p>
-      {% endif %}
 </body>
 {% endblock %}

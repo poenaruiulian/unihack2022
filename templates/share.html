@@ -1,0 +1,30 @@
+<!--
+<p></p>
+<p>{{card.displayName}}</p>
+<img> 
+-->
+
+{% extends "base.html" %}
+{% block style %} <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='card.css') }}">   {% endblock %}
+
+{% block body %}
+
+<body>
+    <div class="container">
+        <div class= "card">
+            <h1>{{card.displayName}}</h1>
+            <img class="profileImg" src="data:card.mimetype;base64,{{base64.b64encode(card.profilePic).decode('utf-8') }}">
+            <br>
+            <div class="links">
+                {% for i in range(k)%}
+                    <div class="linkTotal">
+                        <div class="linkDiv"><a class="linkA"><img class="linkImg" src="data:mims[i].mimetype;base64,{{base64.b64encode(imgs[i]).decode('utf-8') }}"></a></div>
+                        <div class="tooltip"><p><b>  {{names[i]}}  </b></p></div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</body>
+
+{% endblock %}

@@ -1,109 +1,177 @@
 :root {
-    --bgcolor : #FCE2DB
-    --container-border-color : #624F82
-    --box-shadow: #888888
-    --background-color-container: #FAF7F0
-    --background-color-input: #80489C
-    --background-color-hover: #432C7A
-    --font-color-input: #3F3B6C
-  }
-  
-  body {
-    margin: none;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-      sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    background-image: url(./images/giphy.gif) ;
-  }
-  .container{
-    border: 1.5px solid #624F82;
-    border-radius: 50px;
-    box-shadow: 5px 8px  12px #888888;
-    margin:auto 25% 15% 25%;
-    background-color: #FAF7F0;
-    text-align: center;
-    padding: 0rem 6rem 3rem 6rem ;
-  }
-  .logo{
-    margin: 1rem;
-    width: 5rem;
-    height: 5rem;
-  }
-  input[type=submit] {
-    width: 50%;
-    background-color: #80489C;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 15px;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: 600;
-  }
-  
-  input[type=submit]:hover {
-    background-color: #432C7A;
-    font-size: 18px;
-    font-weight: 600;
-  }
-  input[type=password], input[type=email], input[type=name]{
-  
-    align-items: center;
-    width: 100%;
-    padding: 12px 20px 12px 20px;
-    margin: 8px 0;
-    display: block;
-    border: 2px solid #000;
-    border-radius: 4px;
-    box-sizing: border-box;
-    text-align: center;
-    border-radius: none;
-    color:#3F3B6C;
-    font-size: 16px;
-    background-color: #EAEAEA
-  }
-  
-  label{
-    font-weight: 700;
-    font-size: 28px;
-    color: #3F3B6C
-  }
-  .logIn{
-    font-size: 36px;
-    color: #3F3B6C;
-    margin: 2rem 6rem 4rem 6rem;
-  }
-  .register{
-    font-size: 14px;
-    font-weight: 400;
-    margin: 2rem auto 2rem;
-  }
-  code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-      monospace;
-  }
-  .header{
-        display: inline-flexbox;
-        text-align: center;
-        font-size: 36px;
-        font-weight: 700;
-        color: #ccc;
-        position: inherit;
-        padding: auto auto 2rem;
-  
-  }
-  header {
-    text-align: center;
-    font-size: 36px;
-    font-weight: 700;
-    color: white;
-    position: inherit;
-    padding: auto auto 2rem;
-  
-  }  
-  span{
-    color:#000
-  }
+  --bgcolor : #FCE2DB
+  --container-border-color : #624F82
+  --box-shadow: #888888
+  --background-color-container: #FAF7F0
+  --background-color-input: #80489C
+  --background-color-hover: #432C7A
+  --font-color-input: #3F3B6C
+}
+
+body {
+  margin: none;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: url(./images/giphy.gif) ;
+}
+.container{
+  border: 1.5px solid #624F82;
+  border-radius: 50px;
+  box-shadow: 5px 8px  12px #888888;
+  margin:auto 25% 0 25%;
+  background-color: #FAF7F0;
+  text-align: center;
+  padding: 0rem 6rem 3rem 6rem ;
+}
+.logo{
+  margin: 1rem;
+  width: 4rem;
+  height: 4rem;
+  position: absolute;
+  top: 1%;
+  left: 1%;
+
+}
+input[type=submit] {
+  width: 50%;
+  background-color: #80489C;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+input[type=submit]:hover {
+  background-color: #432C7A;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+input[type=password], input[type=email], input[type=name]{
+
+  align-items: center;
+  width: 100%;
+  padding: 12px 20px 12px 20px;
+  margin: 8px 0;
+  display: block;
+  border: 2px solid #000;
+  border-radius: 4px;
+  box-sizing: border-box;
+  text-align: center;
+  border-radius: none;
+  color:#3F3B6C;
+  font-size: 16px;
+  background-color: #EAEAEA
+}
+
+
+.linkBox {
+
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 10px;
+  width: 100%;
+}
+
+.linkBoxTitle {
+  width: 40%;
+  height: 50%;
+  border: 8px;
+  border-radius: 15px;
+}
+
+.linkBoxPhoto {
+  width: 15%;
+  height: 100%;
+  padding: 10px;
+  display: block;
+  border: 5%  ;
+
+  /* background-color: #80489C;
+  border-radius: 25px;
+  font-size: 5px;
+  color: white;
+  border: 1% 50% 1% 50%; */
+}
+.avatar{
+  width: 15%;
+  height: 100%;
+  padding: 10px;
+  display: block;
+  border: 5%  ;
+
+  background-color: #80489C;
+  border-radius: 25px;
+  font-size: 5px;
+  color: white;
+  border: 1% 50% 1% 50%;
+}
+.linkBoxLink {
+  width: 40%;
+  height: 50%;
+  border-radius: 15px;
+}
+
+label{
+  font-weight: 700;
+  font-size: 28px;
+  color: #3F3B6C
+}
+.logIn{
+  font-size: 36px;
+  color: #3F3B6C;
+  margin: 2rem 6rem 4rem 6rem;
+}
+.register{
+  font-size: 14px;
+  font-weight: 400;
+  margin: 2rem auto 2rem;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.header{
+  display: flexbox;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  color: #ccc;
+  position: inherit;
+  padding: auto auto 2rem;
+  margin: 2% auto 2% auto;
+
+}
+header {
+text-align: center;
+font-size: 36px;
+font-weight: 700;
+color: white;
+position: inherit;
+padding: auto auto 2rem;
+
+}  
+span{
+  color:#000
+}
+
+.LabelImg{
+  font-size: 21px;
+}
+
+Form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
