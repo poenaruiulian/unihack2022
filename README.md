@@ -15,10 +15,12 @@
 ### With simplicity in mind, you can add five social links in the CreateCard page
 <img src="./imagesForReadme/createCard.png" width="800" height="430">
 
-### And the 'la pièce de résistance' the card
+### And 'la pièce de résistance' the card
 <img src="./imagesForReadme/Untitled.png" width="800" height="430">
 
 ## Our Team 
 - **Pop Iulian**: Front End developer
 - **Poenaru Iulian**: BackEnd developer
 - **Raevschi Cătălin**: Front End developer
+
+` This project is in the preAlpha release `
