@@ -7,6 +7,7 @@
 
 ### Provides simple connectivity with a simple to use authentification.
 <img src="./imagesForReadme/login.png" width="700" height="400">
+<img src="./imagesForReadme/register.png" width="700" height="400">
 
 
 ## Our Team 
